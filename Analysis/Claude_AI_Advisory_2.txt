@@ -1,0 +1,34 @@
+# FACILITY ADVISORY — SALAR DE ATACAMA LI RECOVERY (SITE-005)
+
+---
+
+## **SITUATION**
+
+**Inlet Profile:**
+- Li concentration: 1850 mg/L (primary target species)
+- pH inlet: 7.1 (neutral, within typical Atacama brine range)
+- Turbidity inlet: 95 NTU (elevated; exceeds permit floor of 20 NTU by 4.75×)
+- Flow rate: 195 L/s nominal → 189.5 L/s live (3% throttle, expected for multi-cycle IX operation)
+
+**Active Treatment Train:** LI-IX (lithium-selective ion exchange recovery)
+
+**Current Outlet State:**
+- pH outlet: 7.06 (on-target; ±0.06 variance acceptable)
+- Turbidity outlet: 16.7 NTU (compliant; <20 NTU permit)
+- Li recovery: 87.4% (below 90% target)
+
+**Sludge Generation:** 797 kg/day non-radioactive (consistent with Al₂(SO₄)₃ coagulation load at 100 mg/L)
+
+---
+
+## **NOTABLE PARAMETERS**
+
+| Parameter | Live Value | Threshold | Status | Notes |
+|-----------|-----------|-----------|--------|-------|
+| **Li recovery** | 87.4% | 90.0% (target) | ⚠ **WATCH** | 2.6 percentage points below recovery target; 97.1% of acceptable minimum |
+| **Inlet turbidity** | 95 NTU | 20 NTU (permit) | ⚠ **INLET ISSUE** | Exceeds permit; upstream clarification underperforming |
+| **Outlet turbidity** | 16.7 NTU | 20 NTU (permit) | ✓ COMPLIANT | Coagulation/flocculation effective; Al₂(SO₄)₃ dose adequate |
+| **Outlet pH** | 7.06 | 7.0 ± 0.1 target | ✓ COMPLIANT | Neutral range maintained; CO₂ dose balanced |
+| **Flow rate variance** | 189.5 vs 195 L/s | — | ⚠ **MONITOR** | 3% throttle typical for IX saturation; verify column pressure not rising |
+
+**No radioactive contaminants detected in telemetry; non-radioactive s

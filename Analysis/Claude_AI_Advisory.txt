@@ -1,0 +1,38 @@
+# PROCESS ADVISORY — SALAR DE ATACAMA LI RECOVERY (SITE-005)
+**Timestamp: 2026-03-19T21:51:34.934Z**
+
+---
+
+## **SITUATION**
+
+Inlet brine carries **1850 mg/L Li** at pH 7.1 with elevated inlet turbidity (95 NTU, well above permit ceiling of 20 NTU). Treatment train operates as **LI-IX** (lithium ion-exchange recovery). Current flow **199.6 L/s** (nominal ~195 L/s design — slight overage). 
+
+**Outlet conditions (live):**
+- pH outlet: 6.87 (0.13 units below 7.0 target)
+- Turbidity outlet: 14.8 NTU (compliant; well within 20 NTU permit)
+- Li recovery: **91.3%** (exceeding 90% multi-cycle target by +1.3 percentage points)
+
+**Active treatment stages:**
+- Clarification/coagulation with Al₂(SO₄)₃ (100 mg/L) — removing inlet suspended solids
+- Ion-exchange resin contactors — recovering Li
+- CO₂ pH correction (15 mg/L) — attempting to stabilize outlet pH near 7.0
+- HCl eluent regeneration (180 mg/L equiv.) — stripping adsorbed Li from resin
+
+**Sludge stream:** 783 kg/day non-radioactive (alum hydroxide + entrained solids); **no radioactive contamination reported.**
+
+---
+
+## **NOTABLE PARAMETERS**
+
+1. **Inlet turbidity (95 NTU) vs. permit (20 NTU)**  
+   - **Status:** 475% of permit ceiling — significantly elevated feed water quality issue  
+   - **Root cause likely upstream:** pre-treatment clarification inadequate or feed source subject to seasonal silting/colloidal loading  
+   - This drives increased alum dose requirement (100 mg/L currently deployed)
+
+2. **Li recovery 91.3% vs. target 90%**  
+   - **Status:** EXCEEDS TARGET by +1.3 pp — excellent resin saturation and selectivity  
+   - **No compliance threshold breach**; indicates strong ion-exchange kinetics and appropriate residence time in contactors
+
+3. **pH outlet 6.87 vs. target 7.0**  
+   - **Status:** −0.13 units below setpoint — minor undershooting  
+   - **

@@ -71,6 +71,9 @@ export default function GlobeScene({
   // Resize handler ref — must be a stable named reference (ST-3A-05b)
   const handleResizeRef = useRef(null);
 
+  // ResizeObserver ref — catches the container's first real layout after CSS lands.
+  const resizeObserverRef = useRef(null);
+
   // onBeforeRender callback ref — avoids stale closure (ST-3A-06e)
   const onBeforeRenderRef = useRef(onBeforeRender);
   useEffect(() => {
@@ -204,6 +207,10 @@ export default function GlobeScene({
       window.removeEventListener('resize', handleResizeRef.current);
       handleResizeRef.current = null;
     }
+    if (resizeObserverRef.current) {
+      resizeObserverRef.current.disconnect();
+      resizeObserverRef.current = null;
+    }
 
     // 3. Remove scene children before disposal (CA-3A-BC-04)
     if (sceneRef.current) {
@@ -262,12 +269,22 @@ export default function GlobeScene({
     const handleResize = () => {
       const w = container.clientWidth;
       const h = container.clientHeight;
+      if (w === 0 || h === 0) return;  // pre-layout: skip until the container has real dimensions
       camera.aspect = w / h;          // ST-3A-05c
       camera.updateProjectionMatrix(); // ST-3A-05d
       renderer.setSize(w, h);          // ST-3A-05e
     };
     handleResizeRef.current = handleResize;
     window.addEventListener('resize', handleResize); // ST-3A-05a
+
+    // Vite emits the module <script> before the <link rel=stylesheet>, and a module
+    // script does not block on a following stylesheet — so the container can measure
+    // 0 height on mount, and no window 'resize' fires when the CSS later lands,
+    // leaving the renderer stuck at that stale 0 (a permanent black globe). A
+    // ResizeObserver fires on that first real layout (and every one after).
+    const resizeObserver = new ResizeObserver(handleResize);
+    resizeObserver.observe(container);
+    resizeObserverRef.current = resizeObserver;
 
     // RAF loop — single, non-stacking (ST-3A-03a, ST-3A-03d), suspended while hidden
     stopLoopRef.current = startRafLoop(
